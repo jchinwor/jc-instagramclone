@@ -20,24 +20,24 @@ export default {
       {
       id: "123",
       username:"Netvision",
-      userImg: require("../src/assets/img/actmore.png"),
-      img:require("../src/assets/img/actmore.png"),
+      userImg: require("../src/assets/img/1.jpeg"),
+      img:require("../src/assets/img/1.jpeg"),
       caption:"Crazy Thang",
       likes: "3 likes"
     },
       {
       id: "1234",
       username:"Smith",
-      userImg: require("../src/assets/img/ChrisV.png"),
-      img:require("../src/assets/img/ChrisV.png"),
+      userImg: require("../src/assets/img/2.jpeg"),
+      img:require("../src/assets/img/2.jpeg"),
       caption:"Working",
       likes:"1 likes"
     },
       {
       id: "1235",
       username:"Gifty",
-      userImg: require("../src/assets/img/chiomaBDAYV002.png"),
-      img:require("../src/assets/img/chiomaBDAYV002.png"),
+      userImg: require("../src/assets/img/3.jpeg"),
+      img:require("../src/assets/img/3.jpeg"),
       caption:"Skynet Thang",
       likes:"8 likes"
     },
