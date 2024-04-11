@@ -7,7 +7,7 @@
      :caption=post.caption
      :likes=post.likes
       /> 
-  </div>
+  </div>  
 </template>
 
 <script>
