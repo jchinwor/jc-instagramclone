@@ -10,7 +10,7 @@ module.exports = {
         name: 'assets/[name].[hash:8].[ext]',
       }));
       // Ensure Babel processes .mjs files in the faker package
-      config.module
+      
         .rule('js')
         .test(/\.(js|mjs)$/)
         .include.add(/node_modules[\\\/]@faker-js[\\\/]faker/).end()
