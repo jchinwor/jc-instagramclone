@@ -1,4 +1,5 @@
 module.exports = {
+    publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
     // Force Babel to transpile the @faker-js/faker package
     transpileDependencies: ['@faker-js/faker'],
     chainWebpack: (config) => {
