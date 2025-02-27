@@ -5,7 +5,7 @@
           <img :src="p.avatar" alt="" class="rounded-full w-10 h-10 border-2">
           <div class="flex-1 ml-4">
               <h2 class="font-sembold text-sm">{{p.username}}</h2>
-              <h3 class="text-xs text-gray-400">Works at {{p.company.name}}</h3>
+              <h3 class="text-xs text-gray-400">Works at {{p.company}}</h3>
           </div>
           <button class="text-xs font-bold text-blue-400">Follow</button>
       </div>

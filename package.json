@@ -2,16 +2,16 @@
   "name": "instaclone",
   "version": "0.1.0",
   "private": true,
-  "scripts": { 
+  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.5.0",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
-    "faker": "^5.5.3",
     "postcss": "^7",
     "tailwind-scrollbar-hide": "^1.0.4",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",

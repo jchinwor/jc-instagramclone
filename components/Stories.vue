@@ -1,41 +1,48 @@
 <template>
     <div class="flex space-x-2 p-6 bg-white mt-8 border border-gray-200 rounded-sm overflow-x-scroll scrollbar-thin scrollbar-thumb-black">
-    <div v-for="profile in suggest" :key="profile.id">
-        <Story :profile="profile"/>       
-    </div>  
+        <Story :profile="suggest"/>       
+    
     </div> 
 </template>
-
 <script>
-import Story from '/components/Story.vue'
-import faker from "faker"
-import { watchEffect } from '@vue/runtime-core'
-import { ref } from '@vue/reactivity'
+import Story from "/components/Story.vue";
+import { faker } from "@faker-js/faker";
+import { watchEffect, ref } from "vue";
+
 export default {
-    components:{Story},
-    setup(){
-      const suggest = ref([])
-      const effect = watchEffect(()=>{
-          
-          const suggestions = [...Array(20)].map((_, i) => [{
-              ...faker.helpers.contextualCard(),
-              id:i,
-             
-          }]); 
-          
-             suggest.value = suggestions
-            //  console.log(suggest.value)
+  components: { Story },
+  setup() {
+    const suggest = ref([]);
 
-        })
+    watchEffect(() => {
+      const suggestions = [...Array(20)].map((_, i) => ({
+        id: i,
+        name: faker.person.fullName(),       // Correct for v8+
+        username: faker.internet.userName(),   // Use the internet module for username
+        email: faker.internet.email(),
+        company: faker.company.name(),
+        avatar: faker.image.avatar(),
+        address: {
+          street: faker.location.street(),
+          city: faker.location.city(),
+          state: faker.location.state(),
+          country: faker.location.country(),
+          zipCode: faker.location.zipCode(),
+        },
+      }));
 
-        return{
-            effect,
-            suggest
-        }
-    }
+      console.log(suggestions); // Debug: Check the generated suggestions
+      suggest.value = suggestions;
+    });
 
-}
+    return {
+      suggest,
+    };
+  },
+};
 </script>
+
+
 
 <style>
 
