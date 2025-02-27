@@ -8,7 +8,7 @@
         </svg>
       </div>
       <!-- image -->
-      <img :src="img" class="object-cover " alt="">
+      <img :src="img" class="object-cover w-full" alt="">
 
       <!-- button -->
     <div class="flex justify-between px-4 pt-4">
