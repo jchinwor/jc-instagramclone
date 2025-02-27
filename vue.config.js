@@ -6,6 +6,13 @@ module.exports = {
   chainWebpack: (config) => {
       // Ensure Babel processes .mjs files in the faker package
       config.module
+          .rule('images')
+          .use('url-loader')
+          .loader('url-loader')
+          .tap(options => {
+            // Modify the options for url-loader if needed
+            return options;
+          });
         .rule('js')
         .test(/\.(js|mjs)$/)
         .include.add(/node_modules[\\\/]@faker-js[\\\/]faker/).end()
