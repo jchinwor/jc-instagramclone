@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "postbuild": "cp -r styles dist/"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
